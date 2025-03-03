@@ -13,6 +13,27 @@
             padding: 0;
             line-height: 1.6;
         }
+        nav {
+            background: #2a2a2a;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: #00ccff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #00aaff;
+        }
         .container {
             max-width: 800px;
             margin: 50px auto;
@@ -40,18 +61,43 @@
         .cta:hover {
             background: #00aaff;
         }
+        nav {
+        background: #2a2a2a;
+        padding: 15px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    nav a {
+        color: #00ccff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        color: #00aaff;
+    }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/quiz.html">Quiz</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/support.html">Support</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h1>WebFrens</h1>
         <p>Transform your Discord server into a thriving community with professional setup and management solutions.</p>
         <p>Expert configurations • Secure setups • Custom bots</p>
         <a href="/quiz.html" class="cta">Take the Quiz</a>
-        <p style="margin-top: 20px;">
-            <a href="/pricing.html" style="color: #00ccff; margin: 0 10px;">Pricing</a> | 
-            <a href="/support.html" style="color: #00ccff; margin: 0 10px;">Support</a>
-        </p>
     </div>
 </body>
 </html>

@@ -50,9 +50,38 @@
             text-align: center;
             color: #00ccff;
         }
+        nav {
+        background: #2a2a2a;
+        padding: 15px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    nav a {
+        color: #00ccff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        color: #00aaff;
+    }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/quiz.html">Quiz</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/support.html">Support</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h1>Server Setup Quiz</h1>
         <form id="quizForm">
