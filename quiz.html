@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebFrens - Server Setup Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 50px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #00ccff;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            background: #333;
+            color: #fff;
+        }
+        button {
+            background: #00ccff;
+            color: #1a1a1a;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #00aaff;
+        }
+        #result {
+            text-align: center;
+            color: #00ccff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Server Setup Quiz</h1>
+        <form id="quizForm">
+            <label>What’s your server type?</label>
+            <select name="type">
+                <option value="gaming">Gaming Community</option>
+                <option value="business">Business/Project Team</option>
+                <option value="nft">NFT Project</option>
+                <option value="education">Educational Group</option>
+                <option value="social">Social Community</option>
+            </select>
+
+            <label>How many members do you expect?</label>
+            <select name="size">
+                <option value="small">Small (1-50)</option>
+                <option value="medium">Medium (50-200)</option>
+                <option value="large">Large (200+)</option>
+            </select>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const type = document.querySelector("select[name='type']").value;
+            const size = document.querySelector("select[name='size']").value;
+
+            let recommendation = "Try our ";
+            if (size === "small") {
+                recommendation += "Basic Setup ($250)";
+            } else if (size === "medium" && type !== "business") {
+                recommendation += "Pro Setup ($350)";
+            } else {
+                recommendation += "Pro Setup ($350) + Server Audit ($100)";
+            }
+
+            document.getElementById("result").innerText = recommendation + " for your " + type + " server!";
+        });
+    </script>
+</body>
+</html>
