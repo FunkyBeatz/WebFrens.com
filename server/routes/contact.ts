@@ -14,7 +14,7 @@ const limiter = rateLimit({
 
 // Create reusable transporter object using SMTP transport
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+  host: 'mail.privateemail.com',
   port: 465,
   secure: true,
   auth: {
