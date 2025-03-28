@@ -20,7 +20,7 @@ import testimonialRoutes from './routes/testimonials.js';
 import contactRoutes from './routes/contact.js';
 
 const app = express();
-const PORT = config.server.port;
+const PORT = process.env.PORT || config.server.port;
 
 // Security middleware
 app.use(helmet({
