@@ -83,12 +83,12 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
 
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
-  // Serve static files from the client/dist directory
-  app.use(express.static(join(__dirname, '../client/dist')));
+  // Serve static files from the React build directory
+  app.use(express.static(join(__dirname, '../../client/dist')));
   
   // Handle all other routes by serving the index.html
   app.get('*', (req, res) => {
-    res.sendFile(join(__dirname, '../client/dist/index.html'));
+    res.sendFile(join(__dirname, '../../client/dist/index.html'));
   });
 }
 
